@@ -47,7 +47,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>au.com.silverray.crm</string>
+				<string>com.silverray.crm</string>
 			</array>
 		</dict>
 	</array>

@@ -8,11 +8,11 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: au.com.silverray.crm
+        bundle_identifier: com.silverray.crm
       vars:
         XCODE_PROJECT: "SilverRayCRM.xcodeproj"
         XCODE_SCHEME: "SilverRayCRM"
-        BUNDLE_ID: "au.com.silverray.crm"
+        BUNDLE_ID: "com.silverray.crm"
       xcode: latest
     scripts:
       - name: Inject iOS GoogleService-Info.plist if provided via Codemagic secret
@@ -23,7 +23,7 @@ workflows:
           fi
           if ! grep -q "GOOGLE_APP_ID" Resources/GoogleService-Info.plist; then
             echo "WARNING: Resources/GoogleService-Info.plist does not contain GOOGLE_APP_ID yet."
-            echo "Download the iOS GoogleService-Info.plist for au.com.silverray.crm from Firebase Console (project silverrayrealtyweb) before App Store release."
+            echo "Download the iOS GoogleService-Info.plist for com.silverray.crm from Firebase Console (project silverrayrealtyweb) before App Store release."
           fi
       - name: Install XcodeGen and Generate Xcode Project
         script: |
